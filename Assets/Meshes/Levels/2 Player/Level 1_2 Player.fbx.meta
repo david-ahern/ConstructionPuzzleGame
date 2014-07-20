@@ -1,39 +1,18 @@
 fileFormatVersion: 2
-guid: c7062c96c9952455eb32ad781c0c9908
+guid: 15b4a179dff2a47e1b1e3dc057ca3ea2
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: 1_Fence
-    100002: 2_Fence
-    100004: 3_Fence
-    100006: 4_Fence
-    100008: 5_Fence
-    100010: //RootNode
-    400000: 1_Fence
-    400002: 2_Fence
-    400004: 3_Fence
-    400006: 4_Fence
-    400008: 5_Fence
-    400010: //RootNode
-    2300000: 1_Fence
-    2300002: 2_Fence
-    2300004: 3_Fence
-    2300006: 4_Fence
-    2300008: 5_Fence
-    3300000: 1_Fence
-    3300002: 2_Fence
-    3300004: 3_Fence
-    3300006: 4_Fence
-    3300008: 5_Fence
-    4300000: 5_Fence
-    4300002: 4_Fence
-    4300004: 3_Fence
-    4300006: 2_Fence
-    4300008: 1_Fence
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Level_1_2_Player
+    6400000: //RootNode
     7400000: Default Take
     9500000: //RootNode
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
@@ -52,7 +31,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
