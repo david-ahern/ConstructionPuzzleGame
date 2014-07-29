@@ -7,6 +7,8 @@ public class KeybindHolder : ScriptableObject
 {
     public List<Key> Keys;
 
+    public List<string> AxisNames = new List<string>();
+
     public float GetAxis(string name)
     {
         foreach (Key k in Keys)
@@ -61,6 +63,48 @@ public class KeybindHolder : ScriptableObject
 
         public Key(string n, bool i, KeyCode c, string a) { Name = n; IsAxis = i; Code = c; AxisName = a; }
         public void Update(bool i, KeyCode c, string a) { IsAxis = i; Code = c; AxisName = a; }
+    }
+
+    public IEnumerator RebindKey(string name)
+    {
+        Key keyToSet = null;
+        foreach (Key k in Keys)
+        {
+            if (k.Name == name)
+                keyToSet = k;
+        }
+
+        if (keyToSet == null)
+            yield break;
+
+        bool gotKey = false;
+        while (!gotKey)
+        {
+            foreach (KeyCode key in Enum.GetValues(typeof(KeyCode)))
+            {
+                if (!key.ToString().Contains("JoystickB"))
+                    if (Input.GetKey(key))
+                    {
+                        Debug.Log("Got new button: " + key);
+                        keyToSet.Update(false, key, "");
+                        gotKey = true;
+                        break;
+                    }
+            }
+            if (!gotKey)
+            {
+                foreach (string axis in AxisNames)
+                {
+                    if (Input.GetAxis(axis) != 0)
+                    {
+                        Debug.Log("Got new axis: " + axis);
+                        keyToSet.Update(true, KeyCode.None, axis);
+                    }
+                }
+            }
+            Debug.Log("Waiting for new button");
+            yield return new WaitForEndOfFrame();
+        }
     }
 }
 

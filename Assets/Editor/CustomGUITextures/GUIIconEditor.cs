@@ -10,7 +10,6 @@ public class GUIIconEditor : EditorWindow
     static private string HolderPath = "Assets/Editor/CustomGUITextures/Holders/IconHolder.asset";
     static private string TexturesPath = "Assets/Editor/CustomGUITextures/Textures";
 
-    [SerializeField]
     static GUIIconHolder _IconHolder;
 
     [MenuItem("Custom/GUI Icon Editor")]
@@ -19,25 +18,6 @@ public class GUIIconEditor : EditorWindow
         EditorWindow window = EditorWindow.GetWindow(typeof(GUIIconEditor));
         window.minSize = new Vector2(522, 187);
     }
-
-    static GUIIconEditor()
-    {
-        _IconHolder = (GUIIconHolder)AssetDatabase.LoadAssetAtPath(HolderPath, typeof(GUIIconHolder));
-
-        if (_IconHolder == null)
-        {
-            _IconHolder = ScriptableObject.CreateInstance<GUIIconHolder>();
-            _IconHolder.Keys = new List<string>();
-            _IconHolder.Textures = new List<Texture>();
-            AssetDatabase.CreateAsset(_IconHolder, HolderPath);
-
-            if (_IconHolder == null)
-                Debug.Log("Failed to load or create an IconHolder");
-        }
-
-        GetAllTextures();
-    }
-
 
     Vector2 KeyListScrollPos = new Vector2(0, 0);
 
@@ -179,16 +159,29 @@ public class GUIIconEditor : EditorWindow
 
     static public Texture GetIcon(string key)
     {
+        if (_IconHolder == null)
+        {
+            _IconHolder = (GUIIconHolder)AssetDatabase.LoadAssetAtPath(HolderPath, typeof(GUIIconHolder));
+
+            if (_IconHolder == null)
+            {
+                _IconHolder = ScriptableObject.CreateInstance<GUIIconHolder>();
+                _IconHolder.Keys = new List<string>();
+                _IconHolder.Textures = new List<Texture>();
+                AssetDatabase.CreateAsset(_IconHolder, HolderPath);
+
+                if (_IconHolder == null)
+                    Debug.Log("Failed to load or create an IconHolder");
+            }
+
+            GetAllTextures();
+        }
+
         return _IconHolder.GetTex(key);
         /*foreach (GUIIcon icon in _IconHolder.Icons)
             if (icon.Key == key)
                 return icon.Tex;
         return null;*/
-    }
-
-    static public void DoSomething()
-    {
-        GUILayout.Button("Button");
     }
 }
 
