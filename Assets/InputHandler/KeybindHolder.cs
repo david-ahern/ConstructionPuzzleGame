@@ -9,6 +9,8 @@ public class KeybindHolder : ScriptableObject
 
     public List<string> AxisNames = new List<string>();
 
+    public float Threshold = 0.5f;
+
     public float GetAxis(string name)
     {
         foreach (Key k in Keys)
@@ -30,7 +32,11 @@ public class KeybindHolder : ScriptableObject
         {
             if (K.Name == name)
             {
-                return Convert.ToBoolean(GetAxis(K.Name));
+                float input = GetAxis(name);
+                if (input > Threshold)
+                    return true;
+                else
+                    return false;
             }
         }
         return false;

@@ -10,15 +10,15 @@ public class InputController : MonoBehaviour
 
     void Awake()
     {
-        StartCoroutine(coGetButton());
     }
 
     void Update()
     {
-        bool buttonDown = Keybinds.GetButton("Jump");
+        if (Keybinds.GetButton("Jump"))
+            Debug.Log("Jump");
 
-        if (buttonDown && !GettingButton)
-            StartCoroutine(coGetButton());
+        if (Mathf.Abs(Keybinds.GetAxis("Jump")) > Keybinds.Threshold)
+            Debug.Log("JUMPING");
     }
 
     public IEnumerator coGetButton()

@@ -162,7 +162,6 @@ public class SoundController : MonoBehaviour
 
             DialogueQueue = new List<string>();
 
-
             MiscSources = new List<MiscAudioSource>();
         }
         if (instance == this)

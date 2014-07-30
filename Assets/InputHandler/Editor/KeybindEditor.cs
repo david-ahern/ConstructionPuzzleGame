@@ -30,11 +30,27 @@ public class KeybindEditor : EditorWindow
         }
     }
 
+    List<bool> KeyFoldouts = new List<bool>();
+
     void OnGUI()
     {
-        foreach(KeybindHolder.Key key in _KeyHolder.Keys)
+        if (KeyFoldouts.Count < _KeyHolder.Keys.Count)
+            for (int i = KeyFoldouts.Count; i < _KeyHolder.Keys.Count; i++ )
+                KeyFoldouts.Add(false);
+        else if (KeyFoldouts.Count > _KeyHolder.Keys.Count)
+            for (int i = KeyFoldouts.Count; i > _KeyHolder.Keys.Count; i--)
+                KeyFoldouts.RemoveAt(KeyFoldouts.Count - 1);
+
+        for (int i = 0; i < _KeyHolder.Keys.Count; i++)
         {
-            GUILayout.Label(key.Name);
+            KeyFoldouts[i] = EditorGUILayout.Foldout(KeyFoldouts[i], _KeyHolder.Keys[i].Name, EditorStyles.foldout);
+            if (KeyFoldouts[i])
+            {
+                GUILayout.Label(_KeyHolder.Keys[i].Name);
+                GUILayout.Label(_KeyHolder.Keys[i].IsAxis.ToString());
+                GUILayout.Label(_KeyHolder.Keys[i].Code.ToString());
+                GUILayout.Label(_KeyHolder.Keys[i].AxisName);
+            }
         }
     }
 }
