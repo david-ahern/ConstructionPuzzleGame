@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IKTargetController : MonoBehaviour {
-
+public class IKTargetController : MonoBehaviour 
+{
+    public bool LeftArm = false;
     public Transform HandTarget;
     public Transform ElbowTarget;
 
@@ -19,7 +20,10 @@ public class IKTargetController : MonoBehaviour {
     {
         Vector3 temp = ElbowTargetStartPos;
 
-        temp.y -= HandTarget.localPosition.x - Offset;
+        if (LeftArm)
+            temp.y -= HandTarget.localPosition.x - Offset;
+        else
+            temp.y += HandTarget.localPosition.x + Offset;
 
         ElbowTarget.localPosition = temp;
     }

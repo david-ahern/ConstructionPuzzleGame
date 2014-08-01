@@ -14,11 +14,16 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
-        if (Keybinds.GetButton("Jump"))
+        if (Keybinds.GetButtonUp("MoveUp", KeybindHolder.PlayerNumber.One))
             Debug.Log("Jump");
 
-        if (Mathf.Abs(Keybinds.GetAxis("Jump")) > Keybinds.Threshold)
-            Debug.Log("JUMPING");
+        //if (Keybinds.GetAxis("MoveUp", KeybindHolder.PlayerNumber.One) > 0)
+          //  Debug.Log("Moving up");
+    }
+
+    void LateUpdate()
+    {
+        Keybinds.LateUpdate();
     }
 
     public IEnumerator coGetButton()

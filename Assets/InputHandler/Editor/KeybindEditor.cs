@@ -13,7 +13,110 @@ public class KeybindEditor : EditorWindow
     public static void ShowWindow()
     {
         EditorWindow window = EditorWindow.GetWindow(typeof(KeybindEditor));
+    }
 
+    void OnDestroy()
+    {
+        _KeyHolder = null;
+    }
+
+    List<bool> KeyFoldouts = new List<bool>();
+
+    string searchString = "";
+
+    string newActionName = "";
+
+    KeybindHolder.PlayerNumber ShowPlayer = KeybindHolder.PlayerNumber.One;
+
+    void OnGUI()
+    {
+        if (_KeyHolder == null)
+            GetKeyholder();
+        try
+        {
+            GUIStyle BoldButton = new GUIStyle(EditorStyles.miniButton);
+            BoldButton.fontStyle = FontStyle.Bold;
+
+            Texture AddButton = GUIIconEditor.GetIcon("Add Icon");
+            Texture TrashButton = GUIIconEditor.GetIcon("Trash Icon");
+            Texture UpArrow = GUIIconEditor.GetIcon("Up Icon");
+            Texture DownArrow = GUIIconEditor.GetIcon("Down Icon");
+            Texture SaveIcon = GUIIconEditor.GetIcon("Save Icon");
+
+            GUILayout.BeginHorizontal(GUI.skin.FindStyle("Toolbar"));
+            GUILayout.FlexibleSpace();
+            searchString = GUILayout.TextField(searchString, GUI.skin.FindStyle("ToolbarSeachTextField"), GUILayout.Width(this.position.width - 150));
+            if (GUILayout.Button("", GUI.skin.FindStyle("ToolbarSeachCancelButton")))
+            {
+                searchString = "";
+                GUI.FocusControl(null);
+            }
+            GUILayout.EndHorizontal();
+
+
+            EditorGUILayout.BeginHorizontal();
+            newActionName = GUILayout.TextField(newActionName);
+
+            if (GUILayout.Button("Add Action", GUILayout.Width(100)) && newActionName != "")
+                AddAction(newActionName);
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+
+            if (GUILayout.Button("Player1", (ShowPlayer == KeybindHolder.PlayerNumber.One ? MyGUIStyles.BoldButton : MyGUIStyles.Button)))
+                ShowPlayer = KeybindHolder.PlayerNumber.One;
+            if (GUILayout.Button("Player2", (ShowPlayer == KeybindHolder.PlayerNumber.Two ? MyGUIStyles.BoldButton : MyGUIStyles.Button)))
+                ShowPlayer = KeybindHolder.PlayerNumber.Two;
+            if (GUILayout.Button("Player3", (ShowPlayer == KeybindHolder.PlayerNumber.Three ? MyGUIStyles.BoldButton : MyGUIStyles.Button)))
+                ShowPlayer = KeybindHolder.PlayerNumber.Three;
+            if (GUILayout.Button("Player4", (ShowPlayer == KeybindHolder.PlayerNumber.Four ? MyGUIStyles.BoldButton : MyGUIStyles.Button)))
+                ShowPlayer = KeybindHolder.PlayerNumber.Four;
+
+            EditorGUILayout.EndHorizontal();
+
+            if (KeyFoldouts.Count < _KeyHolder.Keys.Count)
+                for (int i = KeyFoldouts.Count; i < _KeyHolder.Keys.Count; i++)
+                    KeyFoldouts.Add(false);
+            else if (KeyFoldouts.Count > _KeyHolder.Keys.Count)
+                for (int i = KeyFoldouts.Count; i > _KeyHolder.Keys.Count; i--)
+                    KeyFoldouts.RemoveAt(KeyFoldouts.Count - 1);
+
+            for (int i = 0; i < _KeyHolder.Keys.Count; i++)
+            {
+                if (_KeyHolder.Keys[i].PlayerNumber == ShowPlayer)
+                {
+                    KeyFoldouts[i] = EditorGUILayout.Foldout(KeyFoldouts[i], _KeyHolder.Keys[i].Name, EditorStyles.foldout);
+                    if (KeyFoldouts[i])
+                    {
+                        EditorGUILayout.BeginHorizontal();
+                        GUILayout.Label("Is Axis: ");
+                        _KeyHolder.Keys[i].IsAxis = EditorGUILayout.Toggle(_KeyHolder.Keys[i].IsAxis);
+                        EditorGUILayout.EndHorizontal();
+
+                        if (!_KeyHolder.Keys[i].IsAxis)
+                        {
+                            EditorGUILayout.BeginHorizontal();
+                            GUILayout.Label("Key Code: ");
+                            _KeyHolder.Keys[i].Code = (KeyCode)EditorGUILayout.EnumPopup(_KeyHolder.Keys[i].Code);
+                            EditorGUILayout.EndHorizontal();
+                        }
+                        else
+                        {
+                            EditorGUILayout.BeginHorizontal();
+                            GUILayout.Label("Axis Name: ");
+                            _KeyHolder.Keys[i].AxisName = _KeyHolder.AxisNames[EditorGUILayout.Popup(_KeyHolder.AxisNames.IndexOf(_KeyHolder.Keys[i].AxisName), _KeyHolder.AxisNames.ToArray())];
+                            EditorGUILayout.EndHorizontal();
+                        }
+                    }
+                }
+            }
+        }
+        catch
+        { }
+    }
+
+    void GetKeyholder()
+    {
         if (_KeyHolder == null)
         {
             _KeyHolder = (KeybindHolder)AssetDatabase.LoadAssetAtPath(HolderPath, typeof(KeybindHolder));
@@ -30,27 +133,16 @@ public class KeybindEditor : EditorWindow
         }
     }
 
-    List<bool> KeyFoldouts = new List<bool>();
-
-    void OnGUI()
+    private void AddAction(string name)
     {
-        if (KeyFoldouts.Count < _KeyHolder.Keys.Count)
-            for (int i = KeyFoldouts.Count; i < _KeyHolder.Keys.Count; i++ )
-                KeyFoldouts.Add(false);
-        else if (KeyFoldouts.Count > _KeyHolder.Keys.Count)
-            for (int i = KeyFoldouts.Count; i > _KeyHolder.Keys.Count; i--)
-                KeyFoldouts.RemoveAt(KeyFoldouts.Count - 1);
+        KeybindHolder.Key newKeyP1 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], KeybindHolder.PlayerNumber.One);
+        KeybindHolder.Key newKeyP2 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], KeybindHolder.PlayerNumber.Two);
+        KeybindHolder.Key newKeyP3 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], KeybindHolder.PlayerNumber.Three);
+        KeybindHolder.Key newKeyP4 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], KeybindHolder.PlayerNumber.Four);
 
-        for (int i = 0; i < _KeyHolder.Keys.Count; i++)
-        {
-            KeyFoldouts[i] = EditorGUILayout.Foldout(KeyFoldouts[i], _KeyHolder.Keys[i].Name, EditorStyles.foldout);
-            if (KeyFoldouts[i])
-            {
-                GUILayout.Label(_KeyHolder.Keys[i].Name);
-                GUILayout.Label(_KeyHolder.Keys[i].IsAxis.ToString());
-                GUILayout.Label(_KeyHolder.Keys[i].Code.ToString());
-                GUILayout.Label(_KeyHolder.Keys[i].AxisName);
-            }
-        }
+        _KeyHolder.Keys.Add(newKeyP1);
+        _KeyHolder.Keys.Add(newKeyP2);
+        _KeyHolder.Keys.Add(newKeyP3);
+        _KeyHolder.Keys.Add(newKeyP4);
     }
 }

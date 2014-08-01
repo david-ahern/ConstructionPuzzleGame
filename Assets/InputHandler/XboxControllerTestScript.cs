@@ -6,8 +6,8 @@ public class XboxControllerTestScript : MonoBehaviour
 	
 	void Update () 
     {
-        if (Input.GetAxis("Xbox-AButton") > 0)
-            Debug.Log("A Pressed - P1");
+        //if (Input.GetAxis("Xbox-AButton") > 0)
+        //    Debug.Log("A Pressed - P1");
         //if (Input.GetButtonDown("Xbox-AButtonP2"))
         //    Debug.Log("A Pressed - P2");
         //if (Input.GetButtonDown("Xbox-BButton"))
@@ -28,30 +28,37 @@ public class XboxControllerTestScript : MonoBehaviour
         //    Debug.Log("Left Stick Pressed");
         //if (Input.GetButtonDown("Xbox-RStick"))
         //    Debug.Log("Right Stick Pressed");
+        
+        if (Input.GetAxis("Trigger_Left_1") > 0)
+            Debug.Log("P1 Left trigger: " + Input.GetAxis("Trigger_Left_1"));
+        if (Input.GetAxis("Trigger_Right_1") > 0)
+            Debug.Log("P1 Right Trigger: " + Input.GetAxis("Trigger_Right_1"));
 
-        //if (Input.GetAxis("Xbox-LTrigger") > 0)
-        //    Debug.Log("Left trigger: " + Input.GetAxis("Xbox-LTrigger"));
-        //if (Input.GetAxis("Xbox-RTrigger") > 0)
-        //    Debug.Log("Right Trigger: " + Input.GetAxis("Xbox-RTrigger"));
+        if (Input.GetAxis("DPad_Left_1") > 0)
+            Debug.Log("P1 D Pad Left");
+        if (Input.GetAxis("DPad_Right_1") > 0)
+            Debug.Log("P1 D Pad Right");
+        if (Input.GetAxis("DPad_Up_1") > 0)
+            Debug.Log("P1 D Pad Up");
+        if (Input.GetAxis("DPad_Down_1") > 0)
+            Debug.Log("P1 D Pad Down");
 
-        //if (Input.GetAxis("Xbox-DPadLeft") > 0)
-        //    Debug.Log("D Pad Left");
-        //if (Input.GetAxis("Xbox-DPadRight") > 0)
-        //    Debug.Log("D Pad Right");
-        //if (Input.GetAxis("Xbox-DPadUp") > 0)
-        //    Debug.Log("D Pad Up");
-        //if (Input.GetAxis("Xbox-DPadDown") > 0)
-        //    Debug.Log("D Pad Down");
+        if (Input.GetAxis("LStick_Right_1") > 0)
+            Debug.Log("P1 Left stick right: " + Input.GetAxis("LStick_Right_1"));
+        if (Input.GetAxis("LStick_Left_1") > 0)
+            Debug.Log("P1 Left stick left: " + Input.GetAxis("LStick_Left_1"));
+        if (Input.GetAxis("LStick_Up_1") > 0)
+            Debug.Log("P1 Left stick up: " + Input.GetAxis("LStick_Up_1"));
+        if (Input.GetAxis("LStick_Down_1") > 0)
+            Debug.Log("P1 Left stick down: " + Input.GetAxis("LStick_Down_1"));
 
-
-        //if (Input.GetAxis("Xbox-RStickHorizontal") != 0)
-        //    Debug.Log("Right Stick H: " + Input.GetAxis("Xbox-RStickHorizontal"));
-        //if (Input.GetAxis("Xbox-RStickVertical") != 0)
-        //    Debug.Log("Right Stick V: " + Input.GetAxis("Xbox-RStickVertical"));
-
-        //if (Input.GetAxis("Xbox-LStickHorizontal") != 0)
-        //    Debug.Log("Left Stick H: " + Input.GetAxis("Xbox-LStickHorizontal"));
-        //if (Input.GetAxis("Xbox-LStickVertical") != 0)
-        //    Debug.Log("Left Stick V: " + Input.GetAxis("Xbox-LStickVertical"));
+        if (Input.GetAxis("RStick_Right_1") > 0)
+            Debug.Log("P1 Right stick right: " + Input.GetAxis("RStick_Right_1"));
+        if (Input.GetAxis("RStick_Left_1") > 0)
+            Debug.Log("P1 Right stick left: " + Input.GetAxis("RStick_Left_1"));
+        if (Input.GetAxis("RStick_Up_1") > 0)
+            Debug.Log("P1 Right stick up: " + Input.GetAxis("RStick_Up_1"));
+        if (Input.GetAxis("RStick_Down_1") > 0)
+            Debug.Log("P1 Right stick down: " + Input.GetAxis("RStick_Down_1"));
 	}
 }
