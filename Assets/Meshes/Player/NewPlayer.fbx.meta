@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: e10df56637385452597923196a06ff28
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: chest
+    100002: foot_L
+    100004: foot_R
+    100006: forearm_L
+    100008: forearm_R
+    100010: Glasses
+    100012: Hammer
+    100014: hand_L
+    100016: hand_R
+    100018: head
+    100020: heel_L
+    100022: heel_R
+    100024: Helmet
+    100026: hips
+    100028: Mesh
+    100030: neck
+    100032: //RootNode
+    100034: Player
+    100036: ScrewDriver
+    100038: shin_L
+    100040: shin_R
+    100042: shoulder_L
+    100044: shoulder_R
+    100046: spine
+    100048: thigh_L
+    100050: thigh_R
+    100052: toe_L
+    100054: toe_R
+    100056: Tool_Belt
+    100058: upper_arm_L
+    100060: upper_arm_R
+    400000: chest
+    400002: foot_L
+    400004: foot_R
+    400006: forearm_L
+    400008: forearm_R
+    400010: Glasses
+    400012: Hammer
+    400014: hand_L
+    400016: hand_R
+    400018: head
+    400020: heel_L
+    400022: heel_R
+    400024: Helmet
+    400026: hips
+    400028: Mesh
+    400030: neck
+    400032: //RootNode
+    400034: Player
+    400036: ScrewDriver
+    400038: shin_L
+    400040: shin_R
+    400042: shoulder_L
+    400044: shoulder_R
+    400046: spine
+    400048: thigh_L
+    400050: thigh_R
+    400052: toe_L
+    400054: toe_R
+    400056: Tool_Belt
+    400058: upper_arm_L
+    400060: upper_arm_R
+    2300000: Glasses
+    2300002: Hammer
+    2300004: Helmet
+    2300006: ScrewDriver
+    2300008: Tool_Belt
+    3300000: Glasses
+    3300002: Hammer
+    3300004: Helmet
+    3300006: ScrewDriver
+    3300008: Tool_Belt
+    4300000: Mesh
+    4300002: Tool_Belt
+    4300004: Glasses
+    4300006: Helmet
+    4300008: Hammer
+    4300010: ScrewDriver
+    7400000: Default Take
+    7400002: Idle_Foot_Stomp
+    7400004: Idle_Shrug
+    7400006: Idle_Wave
+    7400008: Poses
+    7400010: Step_Left
+    7400012: Step_Right
+    7400014: Walk
+    9500000: //RootNode
+    13700000: Mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
