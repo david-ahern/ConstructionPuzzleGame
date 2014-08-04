@@ -29,7 +29,7 @@ public class XboxControllerTestScript : MonoBehaviour
         //if (Input.GetButtonDown("Xbox-RStick"))
         //    Debug.Log("Right Stick Pressed");
         
-        if (Input.GetAxis("Trigger_Left_1") > 0)
+        /*if (Input.GetAxis("Trigger_Left_1") > 0)
             Debug.Log("P1 Left trigger: " + Input.GetAxis("Trigger_Left_1"));
         if (Input.GetAxis("Trigger_Right_1") > 0)
             Debug.Log("P1 Right Trigger: " + Input.GetAxis("Trigger_Right_1"));
@@ -60,5 +60,9 @@ public class XboxControllerTestScript : MonoBehaviour
             Debug.Log("P1 Right stick up: " + Input.GetAxis("RStick_Up_1"));
         if (Input.GetAxis("RStick_Down_1") > 0)
             Debug.Log("P1 Right stick down: " + Input.GetAxis("RStick_Down_1"));
+        */
+
+        if (InputController.GetButton("Jump"))
+            Debug.Log("Key pressed");
 	}
 }

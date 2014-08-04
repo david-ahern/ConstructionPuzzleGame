@@ -99,13 +99,629 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle_Foot_Stomp
+      takeName: Idle_Foot_Stomp
+      firstFrame: 0
+      lastFrame: 61
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Glasses
+        weight: 0
+      - path: Hammer
+        weight: 0
+      - path: Helmet
+        weight: 0
+      - path: Mesh
+        weight: 0
+      - path: Player
+        weight: 1
+      - path: Player/hips
+        weight: 1
+      - path: Player/hips/spine
+        weight: 1
+      - path: Player/hips/spine/chest
+        weight: 1
+      - path: Player/hips/spine/chest/neck
+        weight: 1
+      - path: Player/hips/spine/chest/neck/head
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: Player/hips/thigh_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/heel_L
+        weight: 0
+      - path: Player/hips/thigh_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/heel_R
+        weight: 0
+      - path: ScrewDriver
+        weight: 0
+      - path: Tool_Belt
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle_Shrug
+      takeName: Idle_Shrug
+      firstFrame: 0
+      lastFrame: 112
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Glasses
+        weight: 0
+      - path: Hammer
+        weight: 0
+      - path: Helmet
+        weight: 0
+      - path: Mesh
+        weight: 0
+      - path: Player
+        weight: 1
+      - path: Player/hips
+        weight: 1
+      - path: Player/hips/spine
+        weight: 1
+      - path: Player/hips/spine/chest
+        weight: 1
+      - path: Player/hips/spine/chest/neck
+        weight: 1
+      - path: Player/hips/spine/chest/neck/head
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: Player/hips/thigh_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/heel_L
+        weight: 0
+      - path: Player/hips/thigh_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/heel_R
+        weight: 0
+      - path: ScrewDriver
+        weight: 0
+      - path: Tool_Belt
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle_Wave
+      takeName: Idle_Wave
+      firstFrame: 0
+      lastFrame: 78
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Glasses
+        weight: 0
+      - path: Hammer
+        weight: 0
+      - path: Helmet
+        weight: 0
+      - path: Mesh
+        weight: 0
+      - path: Player
+        weight: 1
+      - path: Player/hips
+        weight: 1
+      - path: Player/hips/spine
+        weight: 1
+      - path: Player/hips/spine/chest
+        weight: 1
+      - path: Player/hips/spine/chest/neck
+        weight: 1
+      - path: Player/hips/spine/chest/neck/head
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: Player/hips/thigh_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/heel_L
+        weight: 0
+      - path: Player/hips/thigh_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/heel_R
+        weight: 0
+      - path: ScrewDriver
+        weight: 0
+      - path: Tool_Belt
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Poses
+      takeName: Poses
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Glasses
+        weight: 0
+      - path: Hammer
+        weight: 0
+      - path: Helmet
+        weight: 0
+      - path: Mesh
+        weight: 0
+      - path: Player
+        weight: 1
+      - path: Player/hips
+        weight: 1
+      - path: Player/hips/spine
+        weight: 1
+      - path: Player/hips/spine/chest
+        weight: 1
+      - path: Player/hips/spine/chest/neck
+        weight: 1
+      - path: Player/hips/spine/chest/neck/head
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: Player/hips/thigh_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/heel_L
+        weight: 0
+      - path: Player/hips/thigh_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/heel_R
+        weight: 0
+      - path: ScrewDriver
+        weight: 0
+      - path: Tool_Belt
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Step_Left
+      takeName: Step_Left
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Glasses
+        weight: 0
+      - path: Hammer
+        weight: 0
+      - path: Helmet
+        weight: 0
+      - path: Mesh
+        weight: 0
+      - path: Player
+        weight: 1
+      - path: Player/hips
+        weight: 1
+      - path: Player/hips/spine
+        weight: 1
+      - path: Player/hips/spine/chest
+        weight: 1
+      - path: Player/hips/spine/chest/neck
+        weight: 1
+      - path: Player/hips/spine/chest/neck/head
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: Player/hips/thigh_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/heel_L
+        weight: 0
+      - path: Player/hips/thigh_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/heel_R
+        weight: 0
+      - path: ScrewDriver
+        weight: 0
+      - path: Tool_Belt
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Step_Right
+      takeName: Step_Right
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Glasses
+        weight: 0
+      - path: Hammer
+        weight: 0
+      - path: Helmet
+        weight: 0
+      - path: Mesh
+        weight: 0
+      - path: Player
+        weight: 1
+      - path: Player/hips
+        weight: 1
+      - path: Player/hips/spine
+        weight: 1
+      - path: Player/hips/spine/chest
+        weight: 1
+      - path: Player/hips/spine/chest/neck
+        weight: 1
+      - path: Player/hips/spine/chest/neck/head
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: Player/hips/thigh_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/heel_L
+        weight: 0
+      - path: Player/hips/thigh_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/heel_R
+        weight: 0
+      - path: ScrewDriver
+        weight: 0
+      - path: Tool_Belt
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Glasses
+        weight: 0
+      - path: Hammer
+        weight: 0
+      - path: Helmet
+        weight: 0
+      - path: Mesh
+        weight: 0
+      - path: Player
+        weight: 1
+      - path: Player/hips
+        weight: 1
+      - path: Player/hips/spine
+        weight: 1
+      - path: Player/hips/spine/chest
+        weight: 1
+      - path: Player/hips/spine/chest/neck
+        weight: 1
+      - path: Player/hips/spine/chest/neck/head
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: Player/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: Player/hips/thigh_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: Player/hips/thigh_L/shin_L/heel_L
+        weight: 0
+      - path: Player/hips/thigh_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: Player/hips/thigh_R/shin_R/heel_R
+        weight: 0
+      - path: ScrewDriver
+        weight: 0
+      - path: Tool_Belt
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -130,8 +746,315 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    human: []
-    skeleton: []
+    human:
+    - boneName: hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thigh_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thigh_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shin_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shin_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: foot_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: foot_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shoulder_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shoulder_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: forearm_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: forearm_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hand_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hand_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: toe_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: toe_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: NewPlayer(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Glasses
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Hammer
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Helmet
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Mesh
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Player
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: hips
+      position: {x: -0, y: .140767887, z: .743314385}
+      rotation: {x: .538603783, y: .538603663, z: -.458155036, w: .458155006}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: spine
+      position: {x: -.236943454, y: 1.78887412e-08, z: 0}
+      rotation: {x: -1.08212028e-07, y: -.0350567177, z: 3.70304454e-09, w: .999385357}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: chest
+      position: {x: -.184984654, y: 1.39659546e-08, z: 7.4505806e-09}
+      rotation: {x: -1.1119166e-08, y: -.147277817, z: 1.51938568e-15, w: .989095211}
+      scale: {x: .999999881, y: 1, z: .999999881}
+      transformModified: 1
+    - name: neck
+      position: {x: -.286449969, y: 2.16263771e-08, z: -1.49011612e-08}
+      rotation: {x: 2.50957328e-07, y: .34240517, z: -1.31436821e-07, w: .939552367}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: head
+      position: {x: -.32635957, y: 2.46394993e-08, z: -1.11758709e-08}
+      rotation: {x: -2.36888894e-07, y: -.442801476, z: 1.00656344e-07, w: .896619737}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: shoulder_L
+      position: {x: -.105193801, y: -.0182999931, z: .0921045393}
+      rotation: {x: -.423188627, y: -.470212579, z: .493644238, w: .596763611}
+      scale: {x: 1, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: upper_arm_L
+      position: {x: -.352153897, y: -.0194539577, z: -.0203705356}
+      rotation: {x: .743055522, y: .0222145766, z: .0589301996, w: .666259944}
+      scale: {x: .99999994, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: forearm_L
+      position: {x: -.327304274, y: 1.45286322e-07, z: -1.49011612e-08}
+      rotation: {x: -.080577381, y: .052149184, z: .00247433269, w: .995380223}
+      scale: {x: .999999881, y: 1, z: 1}
+      transformModified: 1
+    - name: hand_L
+      position: {x: -.303461045, y: -9.35979187e-08, z: -7.4505806e-09}
+      rotation: {x: .747476101, y: -.0862803459, z: .024123529, w: .658219755}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: shoulder_R
+      position: {x: -.105193794, y: .018300008, z: .0921045393}
+      rotation: {x: .423188627, y: -.470212638, z: -.493644297, w: .59676367}
+      scale: {x: .99999994, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: upper_arm_R
+      position: {x: -.352153897, y: .0194539912, z: -.0203706548}
+      rotation: {x: -.743055522, y: .0222146697, z: -.0589301735, w: .666259885}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: forearm_R
+      position: {x: -.327304274, y: -3.91155481e-08, z: 1.49011612e-08}
+      rotation: {x: .0805773959, y: .0521491729, z: -.00247426447, w: .995380223}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: hand_R
+      position: {x: -.303461015, y: 2.23517418e-07, z: -2.23517418e-08}
+      rotation: {x: -.747476101, y: -.0862802342, z: -.0241235215, w: .658219755}
+      scale: {x: .999999821, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: thigh_L
+      position: {x: .0486180782, y: -.095860824, z: .0165846925}
+      rotation: {x: .0314614065, y: .992444754, z: .00375422766, w: .118530773}
+      scale: {x: 1, y: 1.00000048, z: 1.00000012}
+      transformModified: 1
+    - name: shin_L
+      position: {x: -.341718435, y: 2.13622116e-08, z: -3.9191832e-09}
+      rotation: {x: .00556858117, y: .0916069001, z: .000377545482, w: .995779634}
+      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: foot_L
+      position: {x: -.285625279, y: 2.20607035e-08, z: -1.17506724e-08}
+      rotation: {x: -.0220569391, y: -.678222954, z: -.016852567, w: .734331727}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: toe_L
+      position: {x: -.256794214, y: 2.55968189e-08, z: 4.6566101e-10}
+      rotation: {x: -.00512802554, y: -.16818969, z: -.00460090442, w: .985730588}
+      scale: {x: .99999994, y: .999999702, z: .999999881}
+      transformModified: 1
+    - name: heel_L
+      position: {x: -.285625279, y: 2.20607035e-08, z: -1.17506724e-08}
+      rotation: {x: .957751274, y: .00252333074, z: -.286906421, w: -.0197719838}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: thigh_R
+      position: {x: .0486180894, y: .095860824, z: .0165846515}
+      rotation: {x: -.031461522, y: .992444694, z: -.00375452638, w: .118530907}
+      scale: {x: .99999994, y: 1.00000012, z: .999999762}
+      transformModified: 1
+    - name: shin_R
+      position: {x: -.341718405, y: 3.13157216e-08, z: -2.75616707e-09}
+      rotation: {x: -.00556856021, y: .0916068926, z: -.000377548829, w: .995779634}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: foot_R
+      position: {x: -.285625279, y: 7.68341124e-09, z: -4.97675501e-09}
+      rotation: {x: .0220568758, y: -.678223014, z: .0168526042, w: .734331727}
+      scale: {x: .999999881, y: .99999994, z: .999999821}
+      transformModified: 1
+    - name: toe_R
+      position: {x: -.256794274, y: 5.45696821e-09, z: -3.95812094e-09}
+      rotation: {x: .00512800785, y: -.16818969, z: .00460090581, w: .985730588}
+      scale: {x: .99999994, y: .999999762, z: 1}
+      transformModified: 1
+    - name: heel_R
+      position: {x: -.285625279, y: 7.68341124e-09, z: -4.97675501e-09}
+      rotation: {x: .957751155, y: -.00252256519, z: -.286906689, w: .0197712686}
+      scale: {x: 1.00000012, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: ScrewDriver
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Tool_Belt
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     armTwist: .5
     foreArmTwist: .5
     upperLegTwist: .5
@@ -141,6 +1064,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   additionalBone: 0
   userData: 

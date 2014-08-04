@@ -26,7 +26,7 @@ public class KeybindEditor : EditorWindow
 
     string newActionName = "";
 
-    KeybindHolder.PlayerNumber ShowPlayer = KeybindHolder.PlayerNumber.One;
+    InputController.PlayerNumber ShowPlayer = InputController.PlayerNumber.One;
 
     void OnGUI()
     {
@@ -53,6 +53,7 @@ public class KeybindEditor : EditorWindow
             }
             GUILayout.EndHorizontal();
 
+            ShowPlayer = (InputController.PlayerNumber)EditorGUI.EnumPopup(new Rect(1, 1, 100, 15), "", ShowPlayer);
 
             EditorGUILayout.BeginHorizontal();
             newActionName = GUILayout.TextField(newActionName);
@@ -62,15 +63,6 @@ public class KeybindEditor : EditorWindow
             EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
-
-            if (GUILayout.Button("Player1", (ShowPlayer == KeybindHolder.PlayerNumber.One ? MyGUIStyles.BoldButton : MyGUIStyles.Button)))
-                ShowPlayer = KeybindHolder.PlayerNumber.One;
-            if (GUILayout.Button("Player2", (ShowPlayer == KeybindHolder.PlayerNumber.Two ? MyGUIStyles.BoldButton : MyGUIStyles.Button)))
-                ShowPlayer = KeybindHolder.PlayerNumber.Two;
-            if (GUILayout.Button("Player3", (ShowPlayer == KeybindHolder.PlayerNumber.Three ? MyGUIStyles.BoldButton : MyGUIStyles.Button)))
-                ShowPlayer = KeybindHolder.PlayerNumber.Three;
-            if (GUILayout.Button("Player4", (ShowPlayer == KeybindHolder.PlayerNumber.Four ? MyGUIStyles.BoldButton : MyGUIStyles.Button)))
-                ShowPlayer = KeybindHolder.PlayerNumber.Four;
 
             EditorGUILayout.EndHorizontal();
 
@@ -135,10 +127,10 @@ public class KeybindEditor : EditorWindow
 
     private void AddAction(string name)
     {
-        KeybindHolder.Key newKeyP1 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], KeybindHolder.PlayerNumber.One);
-        KeybindHolder.Key newKeyP2 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], KeybindHolder.PlayerNumber.Two);
-        KeybindHolder.Key newKeyP3 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], KeybindHolder.PlayerNumber.Three);
-        KeybindHolder.Key newKeyP4 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], KeybindHolder.PlayerNumber.Four);
+        KeybindHolder.Key newKeyP1 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], InputController.PlayerNumber.One);
+        KeybindHolder.Key newKeyP2 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], InputController.PlayerNumber.Two);
+        KeybindHolder.Key newKeyP3 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], InputController.PlayerNumber.Three);
+        KeybindHolder.Key newKeyP4 = new KeybindHolder.Key(name, false, KeyCode.None, _KeyHolder.AxisNames[0], InputController.PlayerNumber.Four);
 
         _KeyHolder.Keys.Add(newKeyP1);
         _KeyHolder.Keys.Add(newKeyP2);
