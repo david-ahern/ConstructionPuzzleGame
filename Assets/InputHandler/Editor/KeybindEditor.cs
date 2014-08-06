@@ -60,6 +60,10 @@ public class KeybindEditor : EditorWindow
 
             if (GUILayout.Button("Add Action", GUILayout.Width(100)) && newActionName != "")
                 AddAction(newActionName);
+
+            if (GUILayout.Button("Save Keys", GUILayout.Width(100)))
+                AssetDatabase.SaveAssets();
+
             EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
@@ -102,6 +106,8 @@ public class KeybindEditor : EditorWindow
                     }
                 }
             }
+
+            EditorUtility.SetDirty(_KeyHolder);
         }
         catch
         { }
