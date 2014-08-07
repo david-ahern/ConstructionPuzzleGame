@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private RigidbodyConstraints NormalConstraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
 
     public float AtRestThreshold = 0;
+    public float RestForSeconds = 1;
 
     private Vector3 TargetForward;
 
@@ -29,6 +30,9 @@ public class PlayerController : MonoBehaviour
     public bool Grounded = true;
     public bool BecameGrounded = false;
     private float JumpTime = 0;
+
+    public IKTargetController LeftHandIKController;
+    public IKTargetController RightHandIKController;
 
     public bool Ragdoll
     {
@@ -42,7 +46,6 @@ public class PlayerController : MonoBehaviour
     {
         foreach (Rigidbody r in GetComponentsInChildren<Rigidbody>())
             TotalMass += r.mass;
-        Debug.Log(TotalMass);
     }
 
     void Start()
@@ -143,10 +146,16 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator CheckRagdollAtRest()
     {
-        while (rigidbody.velocity.magnitude >= AtRestThreshold)
-            yield return new WaitForEndOfFrame();
+        float atRestTime = 0;
 
-        yield return new WaitForSeconds(1.0f);
+        while (atRestTime < RestForSeconds)
+        {
+            if (rigidbody.velocity.magnitude < AtRestThreshold)
+                atRestTime += Time.deltaTime;
+            else
+                atRestTime = 0;
+            yield return new WaitForEndOfFrame();
+        }
 
         DisableMovement = true;
         Ragdoll = false;
@@ -190,6 +199,8 @@ public class PlayerController : MonoBehaviour
             isRagdoll = rag;
 
             Anim.enabled = !isRagdoll;
+            LeftHandIKController.IKScript.IsEnabled = !isRagdoll;
+            RightHandIKController.IKScript.IsEnabled = !isRagdoll;
         }
     }
 }
